@@ -573,3 +573,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/satsuki/proprietary/vendor/lib64/libthermalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalclient.so \
     vendor/sony/satsuki/proprietary/vendor/lib64/libthermalioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalioctl.so \
     vendor/sony/satsuki/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so
+
+PRODUCT_PACKAGES += \
+    ims \
+    imssettings
