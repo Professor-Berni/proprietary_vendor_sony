@@ -589,7 +589,3 @@ PRODUCT_COPY_FILES += \
     vendor/sony/sumire/proprietary/vendor/lib64/libthermalclient.so:system/vendor/lib64/libthermalclient.so \
     vendor/sony/sumire/proprietary/vendor/lib64/libthermalioctl.so:system/vendor/lib64/libthermalioctl.so \
     vendor/sony/sumire/proprietary/vendor/lib64/sensors.ssc.so:system/vendor/lib64/sensors.ssc.so
-
-PRODUCT_PACKAGES += \
-    ims \
-    imssettings
