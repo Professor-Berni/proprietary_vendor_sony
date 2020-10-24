@@ -78,6 +78,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/etc/firmware/venus.b04:system/etc/firmware/venus.b04 \
     vendor/sony/kitakami-common/proprietary/etc/firmware/venus.mdt:system/etc/firmware/venus.mdt \
     vendor/sony/kitakami-common/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
+    vendor/sony/kitakami-common/proprietary/lib/libaudioresampler.so:system/lib/libaudioresampler.so \
     vendor/sony/kitakami-common/proprietary/lib/libMiscTaAccessor.so:system/lib/libMiscTaAccessor.so \
     vendor/sony/kitakami-common/proprietary/lib/lib_asb_tee.so:system/lib/lib_asb_tee.so \
     vendor/sony/kitakami-common/proprietary/lib/libcredential-manager-service.so:system/lib/libcredential-manager-service.so \
@@ -98,6 +99,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/lib/soundfx/libsonysweffect.so:system/lib/soundfx/libsonysweffect.so \
     vendor/sony/kitakami-common/proprietary/lib64/hw/gps.default.so:system/lib64/hw/gps.default.so \
     vendor/sony/kitakami-common/proprietary/lib64/lib-preload64.so:system/lib64/lib-preload64.so \
+    vendor/sony/kitakami-common/proprietary/lib64/libaudioresampler.so:system/lib64/libaudioresampler.so \
     vendor/sony/kitakami-common/proprietary/lib64/libMiscTaAccessor.so:system/lib64/libMiscTaAccessor.so \
     vendor/sony/kitakami-common/proprietary/lib64/lib_asb_tee.so:system/lib64/lib_asb_tee.so \
     vendor/sony/kitakami-common/proprietary/lib64/libcredential-manager-service.so:system/lib64/libcredential-manager-service.so \
