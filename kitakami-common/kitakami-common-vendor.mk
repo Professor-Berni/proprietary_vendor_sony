@@ -292,7 +292,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/liblqe.so:system/vendor/lib64/liblqe.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libmdmdetect.so:system/vendor/lib64/libmdmdetect.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libnetmgr.so:system/vendor/lib64/libnetmgr.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib64/libperipheral_client.so:system/vendor/lib64/libperipheral_client.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libprotobuf-cpp-N.so:system/vendor/lib64/libprotobuf-cpp-N.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libqcci_legacy.so:system/vendor/lib64/libqcci_legacy.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libqdi.so:system/vendor/lib64/libqdi.so \

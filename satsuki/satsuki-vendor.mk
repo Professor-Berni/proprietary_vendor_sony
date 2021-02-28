@@ -471,7 +471,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera2_vpe_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_vpe_module.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera2_wnr_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_wnr_module.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_cac2_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_cac2_lib.so \
-    vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_chromaflash_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_chromaflash_lib.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_dw9761b_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_dw9761b_eeprom.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_eeprom_util.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_eeprom_util.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_eztune_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_eztune_module.so \
@@ -523,7 +522,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_isp_wb46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_wb46.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_llvd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_llvd.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_onsemi_cat24c32_eeprom.so \
-    vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_optizoom_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_optizoom_lib.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_ov4688_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov4688_eeprom.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_pdaf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_pdaf.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_pdaf_v3.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_pdaf_v3.so \
@@ -536,7 +534,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_tintless_bg_pca_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tintless_bg_pca_algo.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_trueportrait_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_trueportrait_lib.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tuning.so \
-    vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_ubifocus_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ubifocus_lib.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmcamera_vpu_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_vpu_module.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmipl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmipl.so \
     vendor/sony/satsuki/proprietary/vendor/lib/libmmjpeg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmjpeg.so \

@@ -487,7 +487,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera2_vpe_module.so:system/vendor/lib/libmmcamera2_vpe_module.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera2_wnr_module.so:system/vendor/lib/libmmcamera2_wnr_module.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_cac2_lib.so:system/vendor/lib/libmmcamera_cac2_lib.so \
-    vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_chromaflash_lib.so:system/vendor/lib/libmmcamera_chromaflash_lib.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_dw9761b_eeprom.so:system/vendor/lib/libmmcamera_dw9761b_eeprom.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_eeprom_util.so:system/vendor/lib/libmmcamera_eeprom_util.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_eztune_module.so:system/vendor/lib/libmmcamera_eztune_module.so \
@@ -539,7 +538,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_isp_wb46.so:system/vendor/lib/libmmcamera_isp_wb46.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_llvd.so:system/vendor/lib/libmmcamera_llvd.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so:system/vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so \
-    vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_optizoom_lib.so:system/vendor/lib/libmmcamera_optizoom_lib.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_ov4688_eeprom.so:system/vendor/lib/libmmcamera_ov4688_eeprom.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_pdaf.so:system/vendor/lib/libmmcamera_pdaf.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_pdaf_v3.so:system/vendor/lib/libmmcamera_pdaf_v3.so \
@@ -552,7 +550,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_tintless_bg_pca_algo.so:system/vendor/lib/libmmcamera_tintless_bg_pca_algo.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_trueportrait_lib.so:system/vendor/lib/libmmcamera_trueportrait_lib.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_tuning.so:system/vendor/lib/libmmcamera_tuning.so \
-    vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_ubifocus_lib.so:system/vendor/lib/libmmcamera_ubifocus_lib.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmcamera_vpu_module.so:system/vendor/lib/libmmcamera_vpu_module.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmipl.so:system/vendor/lib/libmmipl.so \
     vendor/sony/sumire/proprietary/vendor/lib/libmmjpeg.so:system/vendor/lib/libmmjpeg.so \
