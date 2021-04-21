@@ -572,3 +572,8 @@ PRODUCT_COPY_FILES += \
     vendor/sony/suzuran/proprietary/vendor/lib/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libStDrvInt.so \
     vendor/sony/suzuran/proprietary/vendor/lib/libthermalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthermalclient.so \
     vendor/sony/suzuran/proprietary/vendor/lib/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.ssc.so
+
+PRODUCT_PACKAGES += \
+    ims \
+    imssettings
+
