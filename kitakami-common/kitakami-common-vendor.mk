@@ -182,6 +182,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/lib/hw/flp.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/flp.default.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/hw/gatekeeper.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gatekeeper.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/hw/keystore.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/keystore.msm8994.so \
+    vendor/sony/kitakami-common/proprietary/vendor/lib/hw/sound_trigger.primary.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/hw/vulkan.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdb-fts.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbloader.so \
