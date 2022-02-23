@@ -24,7 +24,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/suzuran/proprietary/etc/acdbdata/Sony/Sony_Global_cal.acdb:$(TARGET_COPY_OUT_SYSTEM)/etc/acdbdata/Sony/Sony_Global_cal.acdb \
     vendor/sony/suzuran/proprietary/etc/acdbdata/Sony/Sony_Handset_cal.acdb:$(TARGET_COPY_OUT_SYSTEM)/etc/acdbdata/Sony/Sony_Handset_cal.acdb \
     vendor/sony/suzuran/proprietary/etc/acdbdata/Sony/Sony_Hdmi_cal.acdb:$(TARGET_COPY_OUT_SYSTEM)/etc/acdbdata/Sony/Sony_Hdmi_cal.acdb \
-    vendor/sony/suzuran/proprietary/etc/acdbdata/Sony/Sony_Headset_cal.acdb:$(TARGET_COPY_OUT_SYSTEM)/etc/acdbdata/Sony/Sony_Headset_cal.acdb \
     vendor/sony/suzuran/proprietary/etc/acdbdata/Sony/Sony_Speaker_cal.acdb:$(TARGET_COPY_OUT_SYSTEM)/etc/acdbdata/Sony/Sony_Speaker_cal.acdb \
     vendor/sony/suzuran/proprietary/etc/firmware/BCM43xx.hcd:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/BCM43xx.hcd \
     vendor/sony/suzuran/proprietary/etc/firmware/cpp_firmware_v1_1_1.fw:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/cpp_firmware_v1_1_1.fw \
