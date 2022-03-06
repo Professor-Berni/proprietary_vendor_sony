@@ -128,7 +128,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/hw/flp.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/flp.default.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/hw/gatekeeper.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gatekeeper.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/hw/keystore.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/keystore.msm8994.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib64/hw/vulkan.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.msm8994.so \
+    vendor/sony/kitakami-common/proprietary/vendor/lib64/hw/vulkan.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vulkan.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdb-fts.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdbloader.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libacdbrtac.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdbrtac.so \
@@ -183,7 +183,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/lib/hw/gatekeeper.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gatekeeper.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/hw/keystore.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/keystore.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/hw/sound_trigger.primary.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.msm8994.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/hw/vulkan.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.msm8994.so \
+    vendor/sony/kitakami-common/proprietary/vendor/lib/hw/vulkan.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/vulkan.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdb-fts.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbloader.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libacdbrtac.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbrtac.so \
