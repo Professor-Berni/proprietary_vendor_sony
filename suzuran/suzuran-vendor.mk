@@ -96,10 +96,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/suzuran/proprietary/lib/lib_fpc_tac_shared.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib_fpc_tac_shared.so \
     vendor/sony/suzuran/proprietary/lib/libidd.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libidd.so \
     vendor/sony/suzuran/proprietary/lib/liblights-core.so:$(TARGET_COPY_OUT_SYSTEM)/lib/liblights-core.so \
-    vendor/sony/suzuran/proprietary/lib/libmmcamera_interface.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmmcamera_interface.so \
-    vendor/sony/suzuran/proprietary/lib/libmmjpeg_interface.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmmjpeg_interface.so \
-    vendor/sony/suzuran/proprietary/lib/libmm-qcamera.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmm-qcamera.so \
-    vendor/sony/suzuran/proprietary/lib/libqomx_core.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libqomx_core.so \
     vendor/sony/suzuran/proprietary/lib/libsomc_alfortrsc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_alfortrsc.so \
     vendor/sony/suzuran/proprietary/lib/libsomc_alfort.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_alfort.so \
     vendor/sony/suzuran/proprietary/lib/libsomc_bordeauxrsc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_bordeauxrsc.so \
