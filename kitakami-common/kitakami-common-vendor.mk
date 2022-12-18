@@ -435,6 +435,5 @@ PRODUCT_PACKAGES += \
     imssettings \
     qcrilmsgtunnel \
     QtiTelephonyServicelibrary \
-    qcrilhook \
-    qti-telephony-common
+    qcrilhook
 endif
