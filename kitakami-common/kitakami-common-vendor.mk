@@ -19,7 +19,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/bin/adsprpcd:$(TARGET_COPY_OUT_SYSTEM)/bin/adsprpcd \
     vendor/sony/kitakami-common/proprietary/bin/iddd:$(TARGET_COPY_OUT_SYSTEM)/bin/iddd \
     vendor/sony/kitakami-common/proprietary/bin/mlog_qmi_service:$(TARGET_COPY_OUT_SYSTEM)/bin/mlog_qmi_service \
-    vendor/sony/kitakami-common/proprietary/bin/msm_irqbalance:$(TARGET_COPY_OUT_SYSTEM)/bin/msm_irqbalance \
     vendor/sony/kitakami-common/proprietary/bin/pm-proxy:$(TARGET_COPY_OUT_SYSTEM)/bin/pm-proxy \
     vendor/sony/kitakami-common/proprietary/bin/pm-service:$(TARGET_COPY_OUT_SYSTEM)/bin/pm-service \
     vendor/sony/kitakami-common/proprietary/bin/sct_service:$(TARGET_COPY_OUT_SYSTEM)/bin/sct_service \
@@ -110,6 +109,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/lib/soundfx/libsonysweffect.so:$(TARGET_COPY_OUT_SYSTEM)/lib/soundfx/libsonysweffect.so \
     vendor/sony/kitakami-common/proprietary/vendor/bin/hw/android.hardware.drm@1.3-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.3-service.widevine \
     vendor/sony/kitakami-common/proprietary/vendor/bin/mm-pp-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/mm-pp-daemon \
+    vendor/sony/kitakami-common/proprietary/vendor/bin/msm_irqbalance:$(TARGET_COPY_OUT_VENDOR)/bin/msm_irqbalance \
     vendor/sony/kitakami-common/proprietary/vendor/bin/perfd:$(TARGET_COPY_OUT_VENDOR)/bin/perfd \
     vendor/sony/kitakami-common/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
     vendor/sony/kitakami-common/proprietary/vendor/etc/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf-profile0.conf \
