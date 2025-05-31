@@ -337,7 +337,6 @@ PRODUCT_PACKAGES += \
     libexcal_snapshot_ctrl_plugin \
     libexcal_splitter_plugin \
     libexcal_stream_ctrl_plugin \
-    camera.qcom \
     libcacao_client \
     libcacao_common \
     libcacao_imgproc \
@@ -395,6 +394,7 @@ PRODUCT_PACKAGES += \
     libsensor_reg \
     libssd \
     sensors.ssc \
+    camera.vendor.msm8994 \
     libactuator_ad5823 \
     libactuator_ad5823_camcorder \
     libactuator_ad5823_camera \

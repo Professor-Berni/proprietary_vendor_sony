@@ -64,14 +64,11 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/etc/perf-profile5.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf-profile5.conf
 
 PRODUCT_PACKAGES += \
-    gps.default \
     libMiscTaAccessor \
     lib_asb_tee \
     libaudioresampler \
     libcredential-manager-service \
     libdevice_security \
-    libloc_api_v02 \
-    libloc_ds_api \
     libmiscta \
     libplstorage \
     libprotobuf-c \
@@ -93,6 +90,7 @@ PRODUCT_PACKAGES += \
     libq3dtools_esx \
     flp.default \
     gatekeeper.msm8994 \
+    gps.default \
     keystore.msm8994 \
     libC2D2 \
     libCB \
@@ -119,6 +117,8 @@ PRODUCT_PACKAGES += \
     libllvm-glnext \
     libllvm-qcom \
     libllvm-qgl \
+    libloc_api_v02 \
+    libloc_ds_api \
     liblocationservice \
     liblowi_client \
     libmm-abl-oem \

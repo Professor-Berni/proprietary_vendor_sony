@@ -5,28 +5,8 @@
 soong_namespace {
 	imports: [
 		"vendor/sony/suzuran",
+		"device/sony/kitakami-common",
 	],
-}
-
-cc_prebuilt_library_shared {
-	name: "gps.default",
-	owner: "sony",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary//lib/hw/gps.default.so"],
-			shared_libs: ["libutils", "libcutils", "liblog", "libdl", "libc++", "libc", "libm", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary//lib64/hw/gps.default.so"],
-			shared_libs: ["libutils", "libcutils", "liblog", "libdl", "libc++", "libc", "libm", ],
-		},
-	},
-	compile_multilib: "both",
-	relative_install_path: "hw",
-	prefer: true,
 }
 
 cc_prebuilt_library_shared {
@@ -123,46 +103,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary//lib64/libdevice_security.so"],
 			shared_libs: ["libcutils", "liblog", "libc++", "libdl", "libc", "libm", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libloc_api_v02",
-	owner: "sony",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary//lib/libloc_api_v02.so"],
-			shared_libs: ["libutils", "libcutils", "libqmi_cci", "libqmi_common_so", "libdl", "libqmiservices", "libc++", "libc", "libm", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary//lib64/libloc_api_v02.so"],
-			shared_libs: ["libutils", "libcutils", "libqmi_cci", "libqmi_csi", "libqmi_common_so", "libloc_ds_api", "libc++", "libdl", "libc", "libm", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libloc_ds_api",
-	owner: "sony",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary//lib/libloc_ds_api.so"],
-			shared_libs: ["libutils", "libcutils", "libqmi_cci", "libqmi_common_so", "libdsi_netctrl", "libqmiservices", "libc++", "libdl", "libc", "libm", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary//lib64/libloc_ds_api.so"],
-			shared_libs: ["libutils", "libcutils", "libqmi_cci", "libqmi_csi", "libqmi_common_so", "libdsi_netctrl", "libqmiservices", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -298,11 +238,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary//lib/libsys-utils.so"],
-			shared_libs: ["liblog", "libdl", "libgui", "libui", "libutils", "libc++", "libc", "libm", ],
+			shared_libs: ["libsensor", "liblog", "libdl", "libgui", "libui", "libutils", "libc++", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary//lib64/libsys-utils.so"],
-			shared_libs: ["liblog", "libdl", "libgui", "libui", "libutils", "libc++", "libc", "libm", ],
+			shared_libs: ["libsensor", "liblog", "libdl", "libgui", "libui", "libutils", "libc++", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -388,7 +328,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary//lib64/libjni_latinimegoogle.so"],
-			shared_libs: ["libc", "libm", "libstdc++", "libdl", ],
+			shared_libs: ["liblog", "libc", "libm", "libstdc++", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -552,11 +492,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/hw/flp.default.so"],
-			shared_libs: ["libutils", "libcutils", "liblog", "libizat_core", "libdl", "libgeofence", "liblbs_core", "libflp", "libc++", "libc", "libm", ],
+			shared_libs: ["libutils", "libcutils", "liblog", "libloc_core", "libizat_core", "libgps.utils", "libdl", "libgeofence", "liblbs_core", "libflp", "libc++", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/hw/flp.default.so"],
-			shared_libs: ["libutils", "libcutils", "liblog", "libizat_core", "libdl", "libgeofence", "liblbs_core", "libflp", "libc++", "libc", "libm", ],
+			shared_libs: ["libutils", "libcutils", "liblog", "libloc_core", "libizat_core", "libgps.utils", "libdl", "libgeofence", "liblbs_core", "libflp", "libc++", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -579,6 +519,28 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/hw/gatekeeper.msm8994.so"],
 			shared_libs: ["liblog", "libc", "libdl", "libcutils", "libc++", "libm", ],
+		},
+	},
+	compile_multilib: "both",
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "gps.default",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/hw/gps.default.so"],
+			shared_libs: ["libutils", "libcutils", "liblog", "libloc_eng", "libloc_core", "libgps.utils", "libdl", "libc++", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/gps.default.so"],
+			shared_libs: ["libutils", "libcutils", "liblog", "libloc_eng", "libloc_core", "libgps.utils", "libdl", "libc++", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -975,11 +937,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libflp.so"],
-			shared_libs: ["libutils", "libcutils", "liblog", "libizat_core", "libdl", "libgeofence", "liblbs_core", "libc++", "libc", "libm", ],
+			shared_libs: ["libutils", "libcutils", "liblog", "libloc_core", "libizat_core", "libgps.utils", "libdl", "libgeofence", "liblbs_core", "libc++", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libflp.so"],
-			shared_libs: ["libutils", "libcutils", "liblog", "libizat_core", "libdl", "libgeofence", "liblbs_core", "libc++", "libc", "libm", ],
+			shared_libs: ["libutils", "libcutils", "liblog", "libloc_core", "libizat_core", "libgps.utils", "libdl", "libgeofence", "liblbs_core", "libc++", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -996,11 +958,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libgeofence.so"],
-			shared_libs: ["libutils", "libcutils", "liblog", "libizat_core", "liblbs_core", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["libutils", "libcutils", "libgps.utils", "liblog", "libloc_core", "libizat_core", "liblbs_core", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libgeofence.so"],
-			shared_libs: ["libutils", "libcutils", "liblog", "libizat_core", "liblbs_core", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["libutils", "libcutils", "libgps.utils", "liblog", "libloc_core", "libizat_core", "liblbs_core", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1038,11 +1000,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libizat_core.so"],
-			shared_libs: ["libutils", "libcutils", "libloc_api_v02", "libsqlite", "libssl", "libcrypto", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libutils", "libcutils", "libloc_core", "libgps.utils", "libloc_api_v02", "libsqlite", "libssl", "libcrypto", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libizat_core.so"],
-			shared_libs: ["libutils", "libcutils", "libloc_api_v02", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libutils", "libcutils", "libloc_core", "libgps.utils", "libloc_api_v02", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1059,11 +1021,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/liblbs_core.so"],
-			shared_libs: ["libutils", "libcutils", "libizat_core", "libcrypto", "libdl", "libsqlite", "libloc_api_v02", "libmdmdetect", "libperipheral_client", "libc++", "libc", "libm", ],
+			shared_libs: ["liblog", "libutils", "libcutils", "libizat_core", "libloc_core", "libgps.utils", "libcrypto", "libdl", "libsqlite", "libloc_api_v02", "libmdmdetect", "libperipheral_client", "libc++", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/liblbs_core.so"],
-			shared_libs: ["libutils", "libcutils", "libizat_core", "libcrypto", "libdl", "libloc_api_v02", "libmdmdetect", "libperipheral_client", "libc++", "libc", "libm", ],
+			shared_libs: ["liblog", "libutils", "libcutils", "libizat_core", "libloc_core", "libgps.utils", "libcrypto", "libdl", "libloc_api_v02", "libmdmdetect", "libperipheral_client", "libc++", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1135,6 +1097,48 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libloc_api_v02",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libloc_api_v02.so"],
+			shared_libs: ["liblog", "libutils", "libcutils", "libqmi_cci", "libqmi_common_so", "libloc_core", "libgps.utils", "libdl", "libqmiservices", "libc++", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libloc_api_v02.so"],
+			shared_libs: ["liblog", "libutils", "libcutils", "libqmi_cci", "libqmi_csi", "libqmi_common_so", "libloc_core", "libgps.utils", "libloc_ds_api", "libc++", "libdl", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libloc_ds_api",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libloc_ds_api.so"],
+			shared_libs: ["liblog", "libutils", "libcutils", "libqmi_cci", "libqmi_common_so", "libgps.utils", "libdsi_netctrl", "libqmiservices", "libc++", "libdl", "libc", "libm", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libloc_ds_api.so"],
+			shared_libs: ["liblog", "libutils", "libcutils", "libqmi_cci", "libqmi_csi", "libqmi_common_so", "libgps.utils", "libdsi_netctrl", "libqmiservices", "libc++", "libdl", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "liblocationservice",
 	owner: "sony",
 	strip: {
@@ -1143,11 +1147,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/liblocationservice.so"],
-			shared_libs: ["libulp2", "libcutils", "liblbs_core", "libdataitems", "liblowi_client", "libizat_core", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libulp2", "libcutils", "libloc_core", "libloc_eng", "libgps.utils", "liblbs_core", "libdataitems", "liblowi_client", "libizat_core", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/liblocationservice.so"],
-			shared_libs: ["libulp2", "libcutils", "liblbs_core", "libdataitems", "liblowi_client", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libulp2", "libcutils", "libloc_core", "libloc_eng", "libgps.utils", "liblbs_core", "libdataitems", "liblowi_client", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1164,11 +1168,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/liblowi_client.so"],
-			shared_libs: ["libutils", "libcutils", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libutils", "libcutils", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/liblowi_client.so"],
-			shared_libs: ["libutils", "libcutils", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libutils", "libcutils", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1227,11 +1231,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libmm-als.so"],
-			shared_libs: ["libdl", "libandroid", "libcutils", "libc++", "libc", "libm", ],
+			shared_libs: ["liblog", "libdl", "libandroid", "libcutils", "libc++", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libmm-als.so"],
-			shared_libs: ["libdl", "libandroid", "libcutils", "libc++", "libc", "libm", ],
+			shared_libs: ["liblog", "libdl", "libandroid", "libcutils", "libc++", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1290,11 +1294,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libperipheral_client.so"],
-			shared_libs: ["libcutils", "libutils", "libbinder", "libmdmdetect", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libutils", "libbinder", "libmdmdetect", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libperipheral_client.so"],
-			shared_libs: ["libcutils", "libutils", "libbinder", "libmdmdetect", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libutils", "libbinder", "libmdmdetect", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1395,11 +1399,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libquipc_os_api.so"],
-			shared_libs: ["libcutils", "libdiag", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libdiag", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libquipc_os_api.so"],
-			shared_libs: ["libcutils", "libdiag", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libdiag", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1479,11 +1483,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libthermalclient.so"],
-			shared_libs: ["libcutils", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libthermalclient.so"],
-			shared_libs: ["libcutils", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1500,11 +1504,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libtime_genoff.so"],
-			shared_libs: ["libc", "libcutils", "libc++", "libdl", "libm", ],
+			shared_libs: ["liblog", "libc", "libcutils", "libc++", "libdl", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libtime_genoff.so"],
-			shared_libs: ["libc", "libcutils", "libc++", "libdl", "libm", ],
+			shared_libs: ["liblog", "libc", "libcutils", "libc++", "libdl", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1521,11 +1525,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libulp2.so"],
-			shared_libs: ["libutils", "libdl", "libizat_core", "liblog", "liblbs_core", "libc++", "libc", "libm", ],
+			shared_libs: ["libutils", "libgps.utils", "libdl", "libloc_core", "libizat_core", "liblog", "liblbs_core", "libc++", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libulp2.so"],
-			shared_libs: ["libutils", "libdl", "libizat_core", "liblog", "liblbs_core", "libc++", "libc", "libm", ],
+			shared_libs: ["libutils", "libgps.utils", "libdl", "libloc_core", "libizat_core", "liblog", "liblbs_core", "libc++", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1542,11 +1546,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libxtadapter.so"],
-			shared_libs: ["liblog", "libizat_core", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["libgps.utils", "liblog", "libloc_core", "libizat_core", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libxtadapter.so"],
-			shared_libs: ["liblog", "libizat_core", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["libgps.utils", "liblog", "libloc_core", "libizat_core", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1738,7 +1742,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libmmcamera_optizoom_lib.so"],
-			shared_libs: ["liboptizoom", "libdl", "libcutils", "liblog", "libc++", "libc", "libm", ],
+			shared_libs: ["liblog", "liboptizoom", "libdl", "libcutils", "liblog", "libc++", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "32",
@@ -1772,7 +1776,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libmmosal.so"],
-			shared_libs: ["libutils", "libcutils", "libtime_genoff", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libutils", "libcutils", "libtime_genoff", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "32",
@@ -1806,7 +1810,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libtrueportrait.so"],
-			shared_libs: ["liblog", "libdl", "libz", "libm", "libc++", "libc", ],
+			shared_libs: ["liblog", "liblog", "libdl", "libz", "libm", "libc++", "libc", ],
 		},
 	},
 	compile_multilib: "32",
@@ -1858,7 +1862,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/soundfx/libqcbassboost.so"],
-			shared_libs: ["libcutils", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "32",
@@ -1876,7 +1880,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/soundfx/libqcreverb.so"],
-			shared_libs: ["libcutils", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "32",
@@ -1894,7 +1898,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/soundfx/libqcvirt.so"],
-			shared_libs: ["libcutils", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "32",
@@ -1912,7 +1916,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libthermalioctl.so"],
-			shared_libs: ["libcutils", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "64",
@@ -1975,7 +1979,7 @@ cc_prebuilt_binary {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/bin/loc_launcher"],
-			shared_libs: ["libutils", "libcutils", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["libutils", "libcutils", "libgps.utils", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "64",
@@ -2055,7 +2059,7 @@ cc_prebuilt_binary {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/bin/secd"],
-			shared_libs: ["libsqlite", "libcrypto", "libmiscta", "liblog", "libsuntory", "libtee", "libidd", "libprotobuf-c", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["lib-preload64", "libsqlite", "libcrypto", "libmiscta", "liblog", "libsuntory", "libtee", "libidd", "libprotobuf-c", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "64",
@@ -2284,11 +2288,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libcne.so"],
-			shared_libs: ["libbinder", "libcneqmiutils", "libcutils", "libdiag", "libqmi", "libnetutils", "libutils", "libcneapiclient", "libqmiservices", "libqmi_cci", "libdl", "libwpa_client", "libhardware_legacy", "libprotobuf-cpp-lite", "libc++", "libc", "libm", ],
+			shared_libs: ["liblog", "libbinder", "libcneqmiutils", "libcutils", "libdiag", "libqmi", "libnetutils", "libutils", "libcneapiclient", "libqmiservices", "libqmi_cci", "libdl", "libwpa_client", "libhardware_legacy", "libprotobuf-cpp-lite", "libc++", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libcne.so"],
-			shared_libs: ["libbinder", "libcneqmiutils", "libcutils", "libdiag", "libqmi", "libnetutils", "libutils", "libcneapiclient", "libqmiservices", "libqmi_cci", "libdl", "libwpa_client", "libhardware_legacy", "libprotobuf-cpp-lite", "libc++", "libc", "libm", ],
+			shared_libs: ["liblog", "libbinder", "libcneqmiutils", "libcutils", "libdiag", "libqmi", "libnetutils", "libutils", "libcneapiclient", "libqmiservices", "libqmi_cci", "libdl", "libwpa_client", "libhardware_legacy", "libprotobuf-cpp-lite", "libc++", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2305,7 +2309,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libcneapiclient.so"],
-			shared_libs: ["libcutils", "libnetutils", "libutils", "libdiag", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libnetutils", "libutils", "libdiag", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libcneapiclient.so"],
@@ -2368,11 +2372,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libdiag.so"],
-			shared_libs: ["libc", "libcutils", "libc++", "libdl", "libm", ],
+			shared_libs: ["liblog", "libc", "libcutils", "libc++", "libdl", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libdiag.so"],
-			shared_libs: ["libc", "libcutils", "libc++", "libdl", "libm", ],
+			shared_libs: ["liblog", "libc", "libcutils", "libc++", "libdl", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2389,11 +2393,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libdsi_netctrl.so"],
-			shared_libs: ["libqmi", "libqdi", "libdiag", "libcutils", "libnetmgr", "libdsutils", "libconfigdb", "libqmiservices", "libqmi_cci", "libqmi_common_so", "libqmi_client_qmux", "libqmi_client_helper", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libqmi", "libqdi", "libdiag", "libcutils", "libnetmgr", "libdsutils", "libconfigdb", "libqmiservices", "libqmi_cci", "libqmi_common_so", "libqmi_client_qmux", "libqmi_client_helper", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libdsi_netctrl.so"],
-			shared_libs: ["libqmi", "libqdi", "libdiag", "libcutils", "libnetmgr", "libdsutils", "libconfigdb", "libqmiservices", "libqmi_cci", "libqmi_common_so", "libqmi_client_qmux", "libqmi_client_helper", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libqmi", "libqdi", "libdiag", "libcutils", "libnetmgr", "libdsutils", "libconfigdb", "libqmiservices", "libqmi_cci", "libqmi_common_so", "libqmi_client_qmux", "libqmi_client_helper", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2473,11 +2477,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libmdmdetect.so"],
-			shared_libs: ["libcutils", "libutils", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libutils", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libmdmdetect.so"],
-			shared_libs: ["libcutils", "libutils", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libutils", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2620,11 +2624,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libqmi_client_helper.so"],
-			shared_libs: ["libcutils", "libdiag", "libdsutils", "libqmiservices", "libqmi_client_qmux", "libqmi_cci", "libidl", "liblog", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libdiag", "libdsutils", "libqmiservices", "libqmi_client_qmux", "libqmi_cci", "libidl", "liblog", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libqmi_client_helper.so"],
-			shared_libs: ["libcutils", "libdiag", "libdsutils", "libqmiservices", "libqmi_client_qmux", "libqmi_cci", "libidl", "liblog", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libcutils", "libdiag", "libdsutils", "libqmiservices", "libqmi_client_qmux", "libqmi_cci", "libidl", "liblog", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2767,11 +2771,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libril-qc-qmi-1.so"],
-			shared_libs: ["libdsutils", "libcutils", "libutils", "libril", "librilutils", "libril-qc-radioconfig", "libril-qc-ltedirectdisc", "libqmi_cci", "libqmi", "libqmi_client_qmux", "libdiag", "libhardware_legacy", "libqmiservices", "librilqmiservices", "libqmi_client_helper", "libidl", "libtime_genoff", "libsqlite", "libmedia", "libbinder", "libmdmdetect", "libperipheral_client", "libsettings", "libsystem_health_mon", "libxml2", "libdsi_netctrl", "libqdp", "liblqe", "libpin-cache", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libdsutils", "libcutils", "libutils", "libril", "librilutils", "libril-qc-radioconfig", "libril-qc-ltedirectdisc", "libqmi_cci", "libqmi", "libqmi_client_qmux", "libdiag", "libhardware_legacy", "libqmiservices", "librilqmiservices", "libqmi_client_helper", "libidl", "libtime_genoff", "libsqlite", "libmedia", "libbinder", "libmdmdetect", "libperipheral_client", "libsettings", "libsystem_health_mon", "libxml2", "libdsi_netctrl", "libqdp", "liblqe", "libpin-cache", "libc++", "libdl", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libril-qc-qmi-1.so"],
-			shared_libs: ["libdsutils", "libcutils", "libutils", "libril", "librilutils", "libril-qc-radioconfig", "libril-qc-ltedirectdisc", "libqmi_cci", "libqmi", "libqmi_client_qmux", "libdiag", "libhardware_legacy", "libqmiservices", "librilqmiservices", "libqmi_client_helper", "libidl", "libtime_genoff", "libsqlite", "libmedia", "libbinder", "libmdmdetect", "libperipheral_client", "libsettings", "libsystem_health_mon", "libxml2", "libdsi_netctrl", "libqdp", "liblqe", "libpin-cache", "libc++", "libdl", "libc", "libm", ],
+			shared_libs: ["liblog", "libdsutils", "libcutils", "libutils", "libril", "librilutils", "libril-qc-radioconfig", "libril-qc-ltedirectdisc", "libqmi_cci", "libqmi", "libqmi_client_qmux", "libdiag", "libhardware_legacy", "libqmiservices", "librilqmiservices", "libqmi_client_helper", "libidl", "libtime_genoff", "libsqlite", "libmedia", "libbinder", "libmdmdetect", "libperipheral_client", "libsettings", "libsystem_health_mon", "libxml2", "libdsi_netctrl", "libqdp", "liblqe", "libpin-cache", "libc++", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2872,11 +2876,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libsubsystem_control.so"],
-			shared_libs: ["libc", "libcutils", "libqmi_cci", "libqmi_common_so", "libmdmdetect", "libperipheral_client", "libc++", "libdl", "libm", ],
+			shared_libs: ["liblog", "libc", "libcutils", "libqmi_cci", "libqmi_common_so", "libmdmdetect", "libperipheral_client", "libc++", "libdl", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libsubsystem_control.so"],
-			shared_libs: ["libc", "libcutils", "libqmi_cci", "libqmi_common_so", "libmdmdetect", "libperipheral_client", "libc++", "libdl", "libm", ],
+			shared_libs: ["liblog", "libc", "libcutils", "libqmi_cci", "libqmi_common_so", "libmdmdetect", "libperipheral_client", "libc++", "libdl", "libm", ],
 		},
 	},
 	compile_multilib: "both",
