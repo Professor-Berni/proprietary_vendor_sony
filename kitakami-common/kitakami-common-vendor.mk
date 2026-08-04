@@ -109,6 +109,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libplstorage.so:$(TARGET_COPY_OUT_VENDOR)/lib/libplstorage.so \
     vendor/sony/kitakami-common/proprietary/lib/libprotobuf-c.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libprotobuf-c.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libprotobuf-c.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-c.so \
+    vendor/sony/kitakami-common/proprietary/vendor/lib/libqservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqservice.so \
     vendor/sony/kitakami-common/proprietary/lib/libshims_boringssl.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libshims_boringssl.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libshims_boringssl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libshims_boringssl.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefrighthw.so \
@@ -167,6 +168,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libplstorage.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libplstorage.so \
     vendor/sony/kitakami-common/proprietary/lib64/libprotobuf-c.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libprotobuf-c.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libprotobuf-c.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-c.so \
+    vendor/sony/kitakami-common/proprietary/vendor/lib64/libqservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqservice.so \
     vendor/sony/kitakami-common/proprietary/lib64/libshims_boringssl.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libshims_boringssl.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libshims_boringssl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libshims_boringssl.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefrighthw.so \
