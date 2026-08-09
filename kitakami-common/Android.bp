@@ -44,13 +44,25 @@ android_app_import {
 }
 
 android_app_import {
-	name: "imssettings",
+	name: "ims",
 	owner: "sony",
-	apk: "proprietary/app/imssettings/imssettings.apk",
+	apk: "proprietary/priv-app/ims/ims.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
+	privileged: true,
+}
+
+android_app_import {
+	name: "imssettings",
+	owner: "sony",
+	apk: "proprietary/priv-app/imssettings/imssettings.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
 }
 
 android_app_import {
@@ -62,18 +74,6 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: true,
-}
-
-android_app_import {
-	name: "ims",
-	owner: "sony",
-	apk: "proprietary/product/priv-app/ims/ims.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
 }
 
 dex_import {
@@ -95,12 +95,6 @@ dex_import {
 }
 
 dex_import {
-	name: "qti-vzw-ims-internal",
-	owner: "sony",
-	jars: ["proprietary/framework/qti-vzw-ims-internal.jar"],
-}
-
-dex_import {
 	name: "rcsimssettings",
 	owner: "sony",
 	jars: ["proprietary/framework/rcsimssettings.jar"],
@@ -116,6 +110,13 @@ dex_import {
 	name: "vendor.qti.hardware.data.qmi-V1.0-java",
 	owner: "sony",
 	jars: ["proprietary/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar"],
+}
+
+dex_import {
+	name: "qti-vzw-ims-internal",
+	owner: "sony",
+	jars: ["proprietary/vendor/framework/qti-vzw-ims-internal.jar"],
+	soc_specific: true,
 }
 
 dex_import {

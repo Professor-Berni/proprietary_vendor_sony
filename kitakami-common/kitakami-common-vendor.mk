@@ -7,7 +7,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/bin/adsprpcd:$(TARGET_COPY_OUT_SYSTEM)/bin/adsprpcd \
-    vendor/sony/kitakami-common/proprietary/bin/energy-awareness:$(TARGET_COPY_OUT_SYSTEM)/bin/energy-awareness \
     vendor/sony/kitakami-common/proprietary/bin/garden_app:$(TARGET_COPY_OUT_SYSTEM)/bin/garden_app \
     vendor/sony/kitakami-common/proprietary/bin/gpsone_daemon:$(TARGET_COPY_OUT_SYSTEM)/bin/gpsone_daemon \
     vendor/sony/kitakami-common/proprietary/bin/iddd:$(TARGET_COPY_OUT_SYSTEM)/bin/iddd \
@@ -98,6 +97,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/lib/libdevice_security.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdevice_security.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libdevice_security.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdevice_security.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libgps.utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgps.utils.so \
+    vendor/sony/kitakami-common/proprietary/lib/libloc_api_v02.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libloc_api_v02.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libloc_api_v02.so:$(TARGET_COPY_OUT_VENDOR)/lib/libloc_api_v02.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libloc_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libloc_core.so \
     vendor/sony/kitakami-common/proprietary/lib/libloc_ds_api.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libloc_ds_api.so \
@@ -124,7 +124,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/lib/libta.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libta.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libta.so:$(TARGET_COPY_OUT_VENDOR)/lib/libta.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils.so \
-    vendor/sony/kitakami-common/proprietary/lib/libwpa_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libwpa_client.so \
     vendor/sony/kitakami-common/proprietary/lib/soundfx/libsonypostprocbundle.so:$(TARGET_COPY_OUT_SYSTEM)/lib/soundfx/libsonypostprocbundle.so \
     vendor/sony/kitakami-common/proprietary/lib/soundfx/libsonysweffect.so:$(TARGET_COPY_OUT_SYSTEM)/lib/soundfx/libsonysweffect.so \
     vendor/sony/kitakami-common/proprietary/lib64/libgps.utils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libgps.utils.so \
@@ -201,11 +200,10 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/lib/egl/libQTapGLES.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libQTapGLES.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/egl/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_adreno.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/egl/libq3dtools_esx.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_esx.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/hw/flp.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/flp.default.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/hw/gatekeeper.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gatekeeper.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/hw/keystore.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/keystore.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/hw/sound_trigger.primary.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.msm8994.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/hw/vulkan.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.msm8994.so \
+    vendor/sony/kitakami-common/proprietary/vendor/lib/vulkan.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib/vulkan.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libC2D2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libC2D2.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libCB.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCB.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/libEGL_adreno.so \
@@ -222,23 +220,14 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadreno_utils.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libadsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsprpc.so \
     vendor/sony/kitakami-common/proprietary/lib/libadsprpc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libadsprpc.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/libasn1cper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libasn1cper.so \
-    vendor/sony/kitakami-common/proprietary/lib/libasn1cper.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libasn1cper.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/libasn1crt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libasn1crt.so \
-    vendor/sony/kitakami-common/proprietary/lib/libasn1crt.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libasn1crt.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/libasn1crtx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libasn1crtx.so \
-    vendor/sony/kitakami-common/proprietary/lib/libasn1crtx.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libasn1crtx.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudcal.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libbccQTI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbccQTI.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libc2d30-a3xx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2d30-a3xx.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libc2d30-a4xx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2d30-a4xx.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/libchromaflash.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromaflash.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libconnctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libconnctrl.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libdisp-aba.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdisp-aba.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libfastcvopt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcvopt.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libflp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libflp.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/libgdtap.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgdtap.so \
-    vendor/sony/kitakami-common/proprietary/lib/libgdtap.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libgdtap.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libgeofence.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgeofence.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgsl.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libizat_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libizat_core.so \
@@ -263,20 +252,16 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libmmcamera_ubifocus_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ubifocus_lib.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libmmosal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmosal.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libnativewindow.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnativewindow.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/liboptizoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboptizoom.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libprotobuf-cpp-full-v28.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-full-v28.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libprotobuf-cpp-lite-3.9.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-3.9.1.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libprotobuf-cpp-lite-v28.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-v28.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libqti-perfd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-perfd-client.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libqti_performance.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti_performance.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libquipc_os_api.so:$(TARGET_COPY_OUT_VENDOR)/lib/libquipc_os_api.so \
-    vendor/sony/kitakami-common/proprietary/lib/libquipc_os_api.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libquipc_os_api.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/librs_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/librs_adreno_sha1.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno_sha1.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscale.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libthermalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthermalclient.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/libtrueportrait.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtrueportrait.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/libubifocus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libubifocus.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libulp2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libulp2.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libxt_native.so:$(TARGET_COPY_OUT_VENDOR)/lib/libxt_native.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libxtadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libxtadapter.so \
@@ -298,7 +283,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/hw/flp.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/flp.default.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/hw/gatekeeper.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gatekeeper.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/hw/keystore.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/keystore.msm8994.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib64/hw/vulkan.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.msm8994.so \
+    vendor/sony/kitakami-common/proprietary/vendor/lib64/vulkan.msm8994.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vulkan.msm8994.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libC2D2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libC2D2.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libCB.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCB.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libEGL_adreno.so \
@@ -336,11 +321,13 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libllvm-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-qcom.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libllvm-qgl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-qgl.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libloc_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_ext.so \
+    vendor/sony/kitakami-common/proprietary/lib64/libloc_ext.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libloc_ext.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/liblocationservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/liblocationservice_glue.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice_glue.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/liblowi_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_client.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/liblowi_wifihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_wifihal.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/liblowi_wifihal_nl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_wifihal_nl.so \
+    vendor/sony/kitakami-common/proprietary/lib64/liblowi_wifihal_nl.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/liblowi_wifihal_nl.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libmm-abl-oem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-abl-oem.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libmm-abl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-abl.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/libmm-als.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-als.so \
@@ -390,12 +377,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/etc/permissions/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/telephony_product_privapp-permissions-qti.xml \
     vendor/sony/kitakami-common/proprietary/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/telephonyservice.xml \
     vendor/sony/kitakami-common/proprietary/lib/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.imscmservice@1.0.so \
-    vendor/sony/kitakami-common/proprietary/lib/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvideocodec.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/lib-imsvideocodec.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsvideocodec.so \
-    vendor/sony/kitakami-common/proprietary/lib/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvtextutils.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/lib-imsvtextutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsvtextutils.so \
-    vendor/sony/kitakami-common/proprietary/lib/lib-imsvtutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvtutils.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/lib-imsvtutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsvtutils.so \
     vendor/sony/kitakami-common/proprietary/lib/libdiag_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdiag_system.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/libdiag_system.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdiag_system.so \
     vendor/sony/kitakami-common/proprietary/lib/libpin-cache.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libpin-cache.so \
@@ -425,8 +406,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/lib64/vendor.qti.imsrtpservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.imsrtpservice@1.0.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.imscmservice@1.0_vendor.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/lib-imsSDP.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsSDP.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/lib-imscamera.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imscamera.so \
-    vendor/sony/kitakami-common/proprietary/lib/lib-imscamera.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imscamera.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/lib-imscmservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imscmservice.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/lib-imsdpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsdpl.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/lib-imsqimf.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsqimf.so \
@@ -504,7 +483,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/vendor/lib/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.ims.rcsconfig@1.0.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib/vendor.qti.imsrtpservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.imsrtpservice@1.0_vendor.so \
-    vendor/sony/kitakami-common/proprietary/vendor/lib/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.latency@2.0.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/lib-dplmedia.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-dplmedia.so \
     vendor/sony/kitakami-common/proprietary/vendor/lib64/lib-ims-rcscmjni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-ims-rcscmjni.so \
@@ -615,16 +593,16 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     QtiTelephonyService \
+    ims \
     imssettings \
     qcrilmsgtunnel \
-    ims \
     QtiTelephonyServicelibrary \
     imscmlibrary \
     qcrilhook \
-    qti-vzw-ims-internal \
     rcsimssettings \
     vendor.qti.data.factory-V1.0-java \
     vendor.qti.hardware.data.qmi-V1.0-java \
+    qti-vzw-ims-internal \
     qti-telephony-common
 
 PRODUCT_PACKAGES += \
