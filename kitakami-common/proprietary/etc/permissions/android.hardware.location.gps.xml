@@ -14,7 +14,6 @@
      limitations under the License.
 -->
 
-<!-- These are the location-related features for devices that include GPS. -->
 <permissions>
     <feature name="android.hardware.location" />
     <feature name="android.hardware.location.network" />
