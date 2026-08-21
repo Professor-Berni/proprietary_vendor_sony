@@ -86,7 +86,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/kitakami-common/proprietary/etc/permissions/com.qualcomm.location.vzw_library.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.location.vzw_library.xml \
     vendor/sony/kitakami-common/proprietary/etc/permissions/com.qualcomm.location.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.location.xml \
     vendor/sony/kitakami-common/proprietary/etc/qcril.db:$(TARGET_COPY_OUT_VENDOR)/qcril.db \
-    vendor/sony/kitakami-common/proprietary/etc/thermal-engine.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/thermal-engine.conf \
     vendor/sony/kitakami-common/proprietary/framework/izat.xt.srv.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/izat.xt.srv.jar \
     vendor/sony/kitakami-common/proprietary/lib64-a7/libgps.utils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libgps.utils.so \
     vendor/sony/kitakami-common/proprietary/lib64-a7/libizat_core.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libizat_core.so \
