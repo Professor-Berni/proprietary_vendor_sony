@@ -45,6 +45,8 @@ PRODUCT_COPY_FILES += \
     vendor/sony/suzuran/proprietary/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/sensors/sensor_def_qcomdev.conf \
     vendor/sony/suzuran/proprietary/etc/touch_fw_update.sh:$(TARGET_COPY_OUT_SYSTEM)/etc/touch_fw_update.sh \
     vendor/sony/suzuran/proprietary/lib64/hw/libpn547_fw.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/hw/libpn547_fw.so \
+    vendor/sony/suzuran/proprietary/lib64/libcamera_clientsemc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcamera_clientsemc.so \
+    vendor/sony/suzuran/proprietary/lib64/libcameralight.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcameralight.so \
     vendor/sony/suzuran/proprietary/lib64/libcom_fingerprints_service.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcom_fingerprints_service.so \
     vendor/sony/suzuran/proprietary/lib64/libdataitems.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdataitems.so \
     vendor/sony/suzuran/proprietary/lib64/libdrmfs.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdrmfs.so \
@@ -81,11 +83,43 @@ PRODUCT_COPY_FILES += \
     vendor/sony/suzuran/proprietary/lib/libcacao_jpeg.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_jpeg.so \
     vendor/sony/suzuran/proprietary/lib/libcacao_service.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_service.so \
     vendor/sony/suzuran/proprietary/lib/libcacao_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_system.so \
+    vendor/sony/suzuran/proprietary/lib/libcamera_clientsemc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcamera_clientsemc.so \
+    vendor/sony/suzuran/proprietary/lib/libcameralight.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcameralight.so \
+    vendor/sony/suzuran/proprietary/lib/libcammw.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcammw.so \
     vendor/sony/suzuran/proprietary/lib/libcom_fingerprints_service.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcom_fingerprints_service.so \
     vendor/sony/suzuran/proprietary/lib/libdrmfs.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdrmfs.so \
+    vendor/sony/suzuran/proprietary/lib/libexcal_core.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libexcal_core.so \
+    vendor/sony/suzuran/proprietary/lib/libexcal_legacy.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libexcal_legacy.so \
+    vendor/sony/suzuran/proprietary/lib/libexcal_pal.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libexcal_pal.so \
+    vendor/sony/suzuran/proprietary/lib/libexcal_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libexcal_system.so \
     vendor/sony/suzuran/proprietary/lib/libidd.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libidd.so \
+    vendor/sony/suzuran/proprietary/lib/libmm-qcamera.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmm-qcamera.so \
+    vendor/sony/suzuran/proprietary/lib/liboemcamera.so:$(TARGET_COPY_OUT_SYSTEM)/lib/liboemcamera.so \
     vendor/sony/suzuran/proprietary/lib/libQSEEComAPI.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libQSEEComAPI.so \
     vendor/sony/suzuran/proprietary/lib/librpmb.so:$(TARGET_COPY_OUT_SYSTEM)/lib/librpmb.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_alfortrsc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_alfortrsc.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_alfort.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_alfort.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_bordeauxrsc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_bordeauxrsc.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_bordeaux.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_bordeaux.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_canelersc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_canelersc.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_canele.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_canele.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_chokoballcmn.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_chokoballcmn.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_chokoballpal.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_chokoballpal.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_marblersc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_marblersc.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_marble.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_marble.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_melonpanrsc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_melonpanrsc.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_melonpan.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_melonpan.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_mugichocorsc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_mugichocorsc.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_mugichoco.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_mugichoco.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_raisinrsc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_raisinrsc.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_raisin.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_raisin.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_spicarsc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_spicarsc.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_spica.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_spica.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_thermal.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_thermal.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_topporsc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_topporsc.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_toppo.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_toppo.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_yummyrsc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_yummyrsc.so \
+    vendor/sony/suzuran/proprietary/lib/libsomc_yummy.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_yummy.so \
     vendor/sony/suzuran/proprietary/lib/libsony_fooddetect.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsony_fooddetect.so \
     vendor/sony/suzuran/proprietary/lib/libsony_naruto.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsony_naruto.so \
     vendor/sony/suzuran/proprietary/lib/libssd.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libssd.so \
