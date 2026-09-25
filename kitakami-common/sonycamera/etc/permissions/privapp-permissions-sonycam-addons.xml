@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.sonyericsson.android.addoncamera.artfilter">
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.sonyericsson.android.camera3d">
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.sonymobile.android.addoncamera.dual">
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.sonymobile.android.addoncamera.onlineremote">
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.sonymobile.android.addoncamera.styleportrait">
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+        <deny-permission name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+        <deny-permission name="android.permission.READ_LOGS"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.sonymobile.android.addoncamera.supervideo">
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.sonymobile.android.addoncamera.timeshift">
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.sonymobile.android.addoncamera.facefusion">
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+    </privapp-permissions>
+</permissions>
