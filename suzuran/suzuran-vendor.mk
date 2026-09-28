@@ -95,6 +95,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/suzuran/proprietary/lib/libidd.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libidd.so \
     vendor/sony/suzuran/proprietary/lib/libmm-qcamera.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmm-qcamera.so \
     vendor/sony/suzuran/proprietary/lib/liboemcamera.so:$(TARGET_COPY_OUT_SYSTEM)/lib/liboemcamera.so \
+    vendor/sony/suzuran/proprietary/lib/liboemcamera.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboemcamera.so \
     vendor/sony/suzuran/proprietary/lib/libQSEEComAPI.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libQSEEComAPI.so \
     vendor/sony/suzuran/proprietary/lib/librpmb.so:$(TARGET_COPY_OUT_SYSTEM)/lib/librpmb.so \
     vendor/sony/suzuran/proprietary/lib/libsomc_alfortrsc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsomc_alfortrsc.so \
