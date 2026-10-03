@@ -390,7 +390,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/suzuran/proprietary/vendor/camera/streaming.dat:$(TARGET_COPY_OUT_VENDOR)/camera/streaming.dat \
     vendor/sony/suzuran/proprietary/vendor/camera/supported.dat:$(TARGET_COPY_OUT_VENDOR)/camera/supported.dat \
     vendor/sony/suzuran/proprietary/vendor/camera/version.dat:$(TARGET_COPY_OUT_VENDOR)/camera/version.dat \
-    vendor/sony/suzuran/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/sony/suzuran/proprietary/vendor/firmware/tzfingerprint.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/tzfingerprint.b00 \
     vendor/sony/suzuran/proprietary/vendor/firmware/tzfingerprint.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/tzfingerprint.b01 \
     vendor/sony/suzuran/proprietary/vendor/firmware/tzfingerprint.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/tzfingerprint.b02 \
